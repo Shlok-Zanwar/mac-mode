@@ -61,6 +61,7 @@ MacMode sits unobtrusively in your Windows Notification Tray with dynamic icon s
 | **Reopen Tab** | `⌘ + Shift + T` | `Alt + Shift + T` | `Ctrl + Shift + T` |
 | **Quit App** | `⌘ + Q` | `Alt + Q` | `Alt + F4` |
 | **Spotlight** | `⌘ + Space` | `Alt + Space` | `Win + S` (Windows Search / PowerToys Run) |
+| **Screenshot to Clipboard** | `Shift + Alt + 2` / `⌘ + Shift + 2` | `Shift + Alt + 2` | `Win + Shift + S` (Snipping Tool -> Clipboard) |
 
 ### 2. Text Navigation — Using `Alt` (`⌘`)
 

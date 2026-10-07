@@ -157,6 +157,7 @@ MenuCheatSheet:
     • Alt + Shift + T : Reopen Closed Tab (Ctrl + Shift + T)
     • Alt + Q : Quit Application (Alt + F4)
     • Alt + Space : Mac Spotlight Search (Windows Search)
+    • Shift + Alt + 2 : Screenshot to Clipboard (Snipping Tool)
 
     TEXT NAVIGATION (Alt = ⌘)
     • Alt + Left : Beginning of Line (Home)
@@ -216,6 +217,12 @@ return
 !+t::SendInput, ^+t
 !q::SendInput, !{F4}
 !Space::SendInput, #{s}
+
+; --- Screenshots (Direct to Clipboard) ---
+; Shift + Alt + 2: User custom / Mac screenshot to clipboard (Windows Snipping Tool)
++!2::SendInput, #+{s}
++!3::SendInput, {PrintScreen}
++!4::SendInput, #+{s}
 
 ; --- Text Navigation (Alt = ⌘) ---
 !Left::SendInput, {Home}

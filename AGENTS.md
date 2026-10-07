@@ -34,14 +34,17 @@ Mac Equivalent:       [ Ctrl ]  (H/W Fn)  [ Option ] [ Command ] [     Spacebar 
    * Acts as Mac **`Option (⌥)`**.
    * Provides word-by-word jumping (`Win + Left/Right` $\rightarrow$ `Ctrl + Left/Right`) and word deletion (`Win + Backspace` $\rightarrow$ `Ctrl + Backspace`).
 4. **Physical `Alt` (Thumb Key Left of Spacebar)**:
-   * Acts as Mac **`Command (⌘)`**.
-   * Provides all thumb shortcuts: Copy (`Alt+C`), Paste (`Alt+V`), Cut (`Alt+X`), Undo (`Alt+Z`), Redo (`Alt+Shift+Z` / `Alt+Y`), Select All (`Alt+A`), Save (`Alt+S`), Find (`Alt+F`), New Tab (`Alt+T`), Close Tab (`Alt+W`), Reopen Tab (`Alt+Shift+T`), Quit App (`Alt+Q` $\rightarrow$ `Alt+F4`).
-   * Mac Spotlight Search: `Alt + Space` $\rightarrow$ `Win + S` (Windows Search / PowerToys Run).
-   * Mac Screenshot to Clipboard: `Shift + Alt + 2` $\rightarrow$ `Win + Shift + S` (Windows Snipping Tool to clipboard).
-   * Line navigation: `Alt + Left/Right` $\rightarrow$ `Home` / `End`.
-   * Line deletion: `Alt + Backspace` $\rightarrow$ `Shift + Home + Backspace`.
+   * Acts as Mac **`Command (⌘)`** across the entire OS via `$LAlt::LCtrl` and `$RAlt::RCtrl`.
+   * Automatically handles all Command shortcuts: Refresh (`Alt+R`), Hard Reload (`Alt+Shift+R`), Focus URL Bar (`Alt+L`), Bookmark (`Alt+D`), Print (`Alt+P`), Switch Tabs (`Alt+1..9`), Open Link in New Tab (`Alt+Click`), Copy/Paste/Cut/Undo/Redo/Select All/Save/Find/New Tab/Close Tab.
+   * Specific overrides:
+     * App Switcher: `LAlt & Tab::AltTab` preserves smooth Windows window switching.
+     * Quit App: `Alt + Q` $\rightarrow$ `Alt + F4`.
+     * Mac Spotlight Search: `Alt + Space` $\rightarrow$ `Win + S` (Windows Search / PowerToys Run).
+     * Mac Screenshot to Clipboard: `Shift + Alt + 2` $\rightarrow$ `Win + Shift + S` (Windows Snipping Tool to clipboard).
+     * Line navigation: `Alt + Left/Right` $\rightarrow$ `Home` / `End`.
+     * Line deletion: `Alt + Backspace` $\rightarrow$ `Shift + Home + Backspace`.
 5. **Native Windows Preserved**:
-   * `Alt + Tab`: Unaltered, native Windows app switching.
+   * `Alt + Tab`: Preserved via `LAlt & Tab::AltTab` for smooth native app switching.
 
 ---
 

@@ -202,21 +202,57 @@ return
 ; MAC MODE SHORTCUTS (Active only when Suspend is Off)
 ; ==============================================================================
 
-; --- Command Key Equivalents (Thumb Alt = ⌘) ---
-!c::SendInput, ^c
-!v::SendInput, ^v
-!x::SendInput, ^x
-!z::SendInput, ^z
-!+z::SendInput, ^y
-!y::SendInput, ^y
-!a::SendInput, ^a
-!s::SendInput, ^s
-!f::SendInput, ^f
-!t::SendInput, ^t
-!w::SendInput, ^w
-!+t::SendInput, ^+t
-!q::SendInput, !{F4}
-!Space::SendInput, #{s}
+; --- Comprehensive Command Key Suite (Thumb Alt = ⌘) ---
+!a::SendInput, ^a           ; Select All
+!b::SendInput, ^b           ; Bold / Sidebar
+!c::SendInput, ^c           ; Copy
+!d::SendInput, ^d           ; Bookmark
+!e::SendInput, ^e           ; Search / Explorer
+!f::SendInput, ^f           ; Find
+!g::SendInput, ^g           ; Find Next
+!+g::SendInput, ^+g         ; Find Previous
+!h::WinMinimize, A          ; Hide / Minimize current window
+!i::SendInput, ^i           ; Italic
+!j::SendInput, ^j           ; Downloads
+!k::SendInput, ^k           ; Search / Command Palette
+!l::SendInput, ^l           ; Focus URL / Address Bar
+!m::WinMinimize, A          ; Minimize
+!n::SendInput, ^n           ; New Window
+!+n::SendInput, ^+n         ; New Incognito / Private Window
+!o::SendInput, ^o           ; Open File
+!p::SendInput, ^p           ; Print / Quick Open
+!+p::SendInput, ^+p         ; Command Palette
+!q::SendInput, !{F4}        ; Quit Application (Alt + F4)
+!r::SendInput, ^r           ; Refresh Page (Chrome, Edge, VS Code)
+!+r::SendInput, ^+{r}       ; Hard Reload (Bypass Cache)
+!s::SendInput, ^s           ; Save
+!+s::SendInput, ^+s         ; Save As
+!t::SendInput, ^t           ; New Tab
+!+t::SendInput, ^+t         ; Reopen Closed Tab
+!u::SendInput, ^u           ; Underline / View Source
+!v::SendInput, ^v           ; Paste
+!w::SendInput, ^w           ; Close Tab
+!+w::SendInput, ^+w         ; Close Window
+!x::SendInput, ^x           ; Cut
+!y::SendInput, ^y           ; Redo
+!z::SendInput, ^z           ; Undo
+!+z::SendInput, ^y          ; Redo
+!/::SendInput, ^/           ; Toggle Comment
+!Space::SendInput, #{s}     ; Mac Spotlight Search (Windows Search)
+
+; --- Tab Switching (1-9) & Zoom ---
+!1::SendInput, ^1
+!2::SendInput, ^2
+!3::SendInput, ^3
+!4::SendInput, ^4
+!5::SendInput, ^5
+!6::SendInput, ^6
+!7::SendInput, ^7
+!8::SendInput, ^8
+!9::SendInput, ^9
+!=::SendInput, ^{+}
+!-::SendInput, ^{-}
+!0::SendInput, ^0
 
 ; --- Screenshots (Direct to Clipboard) ---
 ; Shift + Alt + 2: User custom / Mac screenshot to clipboard (Windows Snipping Tool)

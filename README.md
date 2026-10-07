@@ -59,6 +59,13 @@ MacMode sits unobtrusively in your Windows Notification Tray with dynamic icon s
 | **New Tab** | `⌘ + T` | `Alt + T` | `Ctrl + T` |
 | **Close Tab** | `⌘ + W` | `Alt + W` | `Ctrl + W` |
 | **Reopen Tab** | `⌘ + Shift + T` | `Alt + Shift + T` | `Ctrl + Shift + T` |
+| **Refresh Page** | `⌘ + R` | `Alt + R` | `Ctrl + R` |
+| **Hard Reload** | `⌘ + Shift + R` | `Alt + Shift + R` | `Ctrl + Shift + R` |
+| **Focus URL Bar** | `⌘ + L` | `Alt + L` | `Ctrl + L` |
+| **Bookmark** | `⌘ + D` | `Alt + D` | `Ctrl + D` |
+| **Print** | `⌘ + P` | `Alt + P` | `Ctrl + P` |
+| **Switch Tabs (1-9)** | `⌘ + 1..9` | `Alt + 1..9` | `Ctrl + 1..9` |
+| **Open Link in New Tab**| `⌘ + Click` | `Alt + Click` | `Ctrl + Click` |
 | **Quit App** | `⌘ + Q` | `Alt + Q` | `Alt + F4` |
 | **Spotlight** | `⌘ + Space` | `Alt + Space` | `Win + S` (Windows Search / PowerToys Run) |
 | **Screenshot to Clipboard** | `Shift + Alt + 2` / `⌘ + Shift + 2` | `Shift + Alt + 2` | `Win + Shift + S` (Snipping Tool -> Clipboard) |

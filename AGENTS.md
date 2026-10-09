@@ -33,6 +33,7 @@ Mac Equivalent:       [ Ctrl ]  (H/W Fn)  [ Option ] [ Command ] [     Spacebar 
 3. **Physical `Win` (Left Windows Key)**:
    * Acts as Mac **`Option (⌥)`**.
    * Provides word-by-word jumping (`Win + Left/Right` $\rightarrow$ `Ctrl + Left/Right`) and word deletion (`Win + Backspace` $\rightarrow$ `Ctrl + Backspace`).
+   * **Standalone Win Key Suppressed (`~LWin::SendInput, {Blind}{vkE8}`)**: In Mac Mode, pressing the Windows key alone is masked with `vkE8` so it never accidentally pops up the Windows Start Menu / search bar (authentic macOS Option key behavior).
    * **Clean Modifier Isolation (`SendOption`)**: To prevent collisions with third-party tools that listen globally for `Ctrl + Win` combinations (e.g. Wispr Flow), Option hotkeys explicitly release `Win` (`{Blind}{LWin up}{RWin up}`) before sending `Ctrl` strokes. This guarantees `Win` and `Ctrl` are never simultaneously active in the OS input stream.
 4. **Physical `Alt` (Thumb Key Left of Spacebar)**:
    * Acts as Mac **`Command (⌘)`** across the entire OS via `$LAlt::LCtrl` and `$RAlt::RCtrl`.
@@ -40,7 +41,7 @@ Mac Equivalent:       [ Ctrl ]  (H/W Fn)  [ Option ] [ Command ] [     Spacebar 
    * Specific overrides:
      * App Switcher: `LAlt & Tab::AltTab` preserves smooth Windows window switching.
      * Quit App: `Alt + Q` $\rightarrow$ `Alt + F4`.
-     * Mac Spotlight Search: `Alt + Space` $\rightarrow$ `Win + S` (Windows Search / PowerToys Run).
+     * Mac Spotlight Search: `Alt + Space` and `Ctrl + Space` $\rightarrow$ `Win + S` (Windows Search / PowerToys Run).
      * Mac Screenshot to Clipboard: `Shift + Alt + 2` $\rightarrow$ `Win + Shift + S` (Windows Snipping Tool to clipboard).
      * Line navigation: `Alt + Left/Right` $\rightarrow$ `Home` / `End`.
      * Line deletion: `Alt + Backspace` $\rightarrow$ `Shift + Home + Backspace`.
@@ -83,7 +84,7 @@ mac-mode/
   * `#Persistent`: Keeps script resident in memory.
   * `#SingleInstance force`: Automatically replaces previous instances.
   * `#InstallKeybdHook` & `#UseHook On`: Low-level keyboard hook prevents recursion.
-  * `#MenuMaskKey vk07`: Uses Microsoft unassigned virtual key to prevent Windows Start menu popups without sending synthetic `Ctrl` strokes.
+  * `#MenuMaskKey vkE8`: Standard unassigned virtual key to prevent Windows Start menu popups without sending synthetic `Ctrl` strokes.
 * **Tray Icon Behavior**:
   * In Mac Mode: Displays `apple.ico`. Tooltip: `Mac Mode: Active (Click to switch to Windows)`.
   * In Windows Mode: Displays `windows.ico`. Tooltip: `Windows Mode: Active (Click to switch to Mac)`.

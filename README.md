@@ -67,7 +67,7 @@ MacMode sits unobtrusively in your Windows Notification Tray with dynamic icon s
 | **Switch Tabs (1-9)** | `⌘ + 1..9` | `Alt + 1..9` | `Ctrl + 1..9` |
 | **Open Link in New Tab**| `⌘ + Click` | `Alt + Click` | `Ctrl + Click` |
 | **Quit App** | `⌘ + Q` | `Alt + Q` | `Alt + F4` |
-| **Spotlight** | `⌘ + Space` | `Alt + Space` | `Win + S` (Windows Search / PowerToys Run) |
+| **Spotlight** | `⌘ + Space` | `Alt + Space` / `Ctrl + Space` | `Win + S` (Windows Search / PowerToys Run) |
 | **Screenshot to Clipboard** | `Shift + Alt + 2` / `⌘ + Shift + 2` | `Shift + Alt + 2` | `Win + Shift + S` (Snipping Tool -> Clipboard) |
 
 ### 2. Text Navigation — Using `Alt` (`⌘`)
@@ -99,6 +99,7 @@ MacMode sits unobtrusively in your Windows Notification Tray with dynamic icon s
 ### 4. Preserved Native Windows Behaviors
 
 - **Native App Switching**: `Alt + Tab` is untouched and works 100% natively in Windows.
+- **Standalone Windows Key Suppressed**: In Mac Mode, pressing the Windows key alone never pops up the Start Menu / Windows bar (matching macOS Option behavior).
 - **Clean Modifier Isolation**: `Win` is cleanly isolated and released prior to injecting `Ctrl` navigation, eliminating collision with global shortcuts like `Ctrl + Win` (e.g. Wispr Flow dictation).
 - **Terminal Friendly**: Physical `Ctrl + C` sends `SIGINT` to terminate terminal programs without intercepting.
 - **No Keyboard Lag**: Low-level Windows keyboard hook guarantees imperceptible latency (< 1ms).

@@ -8,7 +8,7 @@
 #NoEnv
 #InstallKeybdHook
 #UseHook On
-#MenuMaskKey vk07
+#MenuMaskKey vkE8
 SetWorkingDir %A_ScriptDir%
 SendMode Input
 
@@ -164,7 +164,7 @@ MenuCheatSheet:
     • Alt + W : Close Tab (Ctrl + W)
     • Alt + Shift + T : Reopen Closed Tab (Ctrl + Shift + T)
     • Alt + Q : Quit Application (Alt + F4)
-    • Alt + Space : Mac Spotlight Search (Windows Search)
+    • Alt + Space / Ctrl + Space : Mac Spotlight Search (Windows Search)
     • Shift + Alt + 2 : Screenshot to Clipboard (Snipping Tool)
 
     TEXT NAVIGATION (Alt = ⌘)
@@ -180,6 +180,7 @@ MenuCheatSheet:
     • Alt + Delete : Delete Line Forwards (Shift + End -> Delete)
 
     OPTION (Win = ⌥)
+    • Win (Standalone) : Suppressed (No Start Menu / Windows bar popup)
     • Win + Left : Jump Word Left (Ctrl + Left)
     • Win + Right : Jump Word Right (Ctrl + Right)
     • Win + Shift + Left : Select Word Left (Ctrl + Shift + Left)
@@ -246,7 +247,8 @@ return
 !z::SendInput, ^z           ; Undo
 !+z::SendInput, ^y          ; Redo
 !/::SendInput, ^/           ; Toggle Comment
-!Space::SendInput, #{s}     ; Mac Spotlight Search (Windows Search)
+!Space::SendInput, #{s}     ; Mac Spotlight Search (Alt + Space)
+^Space::SendInput, #{s}     ; Mac Spotlight Search (Ctrl + Space)
 
 ; --- Tab Switching (1-9) & Zoom ---
 !1::SendInput, ^1
@@ -281,6 +283,10 @@ return
 !Delete::SendInput, +{End}{Delete}
 
 ; --- Option Key Equivalents (Physical Win = ⌥) ---
+; Suppress standalone Win from opening Windows Start Menu / bar in Mac Mode
+~LWin::SendInput, {Blind}{vkE8}
+~RWin::SendInput, {Blind}{vkE8}
+
 #Left::SendOption("^{Left}")
 #Right::SendOption("^{Right}")
 #+Left::SendOption("^+{Left}")

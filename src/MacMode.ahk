@@ -8,7 +8,7 @@
 #NoEnv
 #InstallKeybdHook
 #UseHook On
-#MenuMaskKey vkE8
+#MenuMaskKey vk07
 SetWorkingDir %A_ScriptDir%
 SendMode Input
 
@@ -34,6 +34,14 @@ return
 ; ------------------------------------------------------------------------------
 ; Helper Functions
 ; ------------------------------------------------------------------------------
+SendOption(keys) {
+    ; Clean modifier isolation: release Win before injecting Ctrl combinations.
+    ; This guarantees that third-party global hooks (e.g., Wispr Flow listening for Ctrl+Win)
+    ; never see Win and Ctrl down at the same millisecond.
+    SendInput, {Blind}{LWin up}{RWin up}
+    SendInput, %keys%
+}
+
 FindIcon(iconName) {
     paths := [A_ScriptDir . "\" . iconName
             , A_ScriptDir . "\assets\" . iconName
@@ -273,9 +281,9 @@ return
 !Delete::SendInput, +{End}{Delete}
 
 ; --- Option Key Equivalents (Physical Win = ⌥) ---
-#Left::SendInput, ^{Left}
-#Right::SendInput, ^{Right}
-#+Left::SendInput, ^+{Left}
-#+Right::SendInput, ^+{Right}
-#BackSpace::SendInput, ^{BackSpace}
-#Delete::SendInput, ^{Delete}
+#Left::SendOption("^{Left}")
+#Right::SendOption("^{Right}")
+#+Left::SendOption("^+{Left}")
+#+Right::SendOption("^+{Right}")
+#BackSpace::SendOption("^{BackSpace}")
+#Delete::SendOption("^{Delete}")

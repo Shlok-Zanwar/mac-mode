@@ -33,6 +33,7 @@ Mac Equivalent:       [ Ctrl ]  (H/W Fn)  [ Option ] [ Command ] [     Spacebar 
 3. **Physical `Win` (Left Windows Key)**:
    * Acts as Mac **`Option (⌥)`**.
    * Provides word-by-word jumping (`Win + Left/Right` $\rightarrow$ `Ctrl + Left/Right`) and word deletion (`Win + Backspace` $\rightarrow$ `Ctrl + Backspace`).
+   * **Clean Modifier Isolation (`SendOption`)**: To prevent collisions with third-party tools that listen globally for `Ctrl + Win` combinations (e.g. Wispr Flow), Option hotkeys explicitly release `Win` (`{Blind}{LWin up}{RWin up}`) before sending `Ctrl` strokes. This guarantees `Win` and `Ctrl` are never simultaneously active in the OS input stream.
 4. **Physical `Alt` (Thumb Key Left of Spacebar)**:
    * Acts as Mac **`Command (⌘)`** across the entire OS via `$LAlt::LCtrl` and `$RAlt::RCtrl`.
    * Automatically handles all Command shortcuts: Refresh (`Alt+R`), Hard Reload (`Alt+Shift+R`), Focus URL Bar (`Alt+L`), Bookmark (`Alt+D`), Print (`Alt+P`), Switch Tabs (`Alt+1..9`), Open Link in New Tab (`Alt+Click`), Copy/Paste/Cut/Undo/Redo/Select All/Save/Find/New Tab/Close Tab.
@@ -82,7 +83,7 @@ mac-mode/
   * `#Persistent`: Keeps script resident in memory.
   * `#SingleInstance force`: Automatically replaces previous instances.
   * `#InstallKeybdHook` & `#UseHook On`: Low-level keyboard hook prevents recursion.
-  * `#MenuMaskKey vkE8`: Prevents Windows Start menu from flashing when modifier keys are released.
+  * `#MenuMaskKey vk07`: Uses Microsoft unassigned virtual key to prevent Windows Start menu popups without sending synthetic `Ctrl` strokes.
 * **Tray Icon Behavior**:
   * In Mac Mode: Displays `apple.ico`. Tooltip: `Mac Mode: Active (Click to switch to Windows)`.
   * In Windows Mode: Displays `windows.ico`. Tooltip: `Windows Mode: Active (Click to switch to Mac)`.

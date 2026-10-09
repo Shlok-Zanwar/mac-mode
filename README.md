@@ -99,6 +99,7 @@ MacMode sits unobtrusively in your Windows Notification Tray with dynamic icon s
 ### 4. Preserved Native Windows Behaviors
 
 - **Native App Switching**: `Alt + Tab` is untouched and works 100% natively in Windows.
+- **Clean Modifier Isolation**: `Win` is cleanly isolated and released prior to injecting `Ctrl` navigation, eliminating collision with global shortcuts like `Ctrl + Win` (e.g. Wispr Flow dictation).
 - **Terminal Friendly**: Physical `Ctrl + C` sends `SIGINT` to terminate terminal programs without intercepting.
 - **No Keyboard Lag**: Low-level Windows keyboard hook guarantees imperceptible latency (< 1ms).
 
